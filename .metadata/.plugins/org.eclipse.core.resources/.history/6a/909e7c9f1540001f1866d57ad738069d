@@ -1,0 +1,10 @@
+package coffee.quiz;
+
+public class MeExam {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

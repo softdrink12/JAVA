@@ -1,0 +1,10 @@
+package Quiz;
+
+public class TranslateExam {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

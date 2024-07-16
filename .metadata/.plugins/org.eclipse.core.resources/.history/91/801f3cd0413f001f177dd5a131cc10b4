@@ -1,0 +1,13 @@
+package Quiz;
+
+public class TranslateExam {
+
+	public static void main(String[] args) {
+
+		Translate tr = new Translate();
+		
+		tr.trans("사랑");
+		
+	}
+
+}

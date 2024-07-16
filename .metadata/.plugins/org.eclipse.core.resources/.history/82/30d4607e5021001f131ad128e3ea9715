@@ -1,0 +1,17 @@
+package chap05;
+
+public class EnumExam {
+
+	public static void main(String[] args) {
+
+		
+		
+		System.out.println(LoginResult.SUCCESS);
+		System.out.println(LoginResult.FAIL);
+		
+		LoginResult login; 
+		login =LoginResult.SUCCESS;
+		
+	}
+
+}

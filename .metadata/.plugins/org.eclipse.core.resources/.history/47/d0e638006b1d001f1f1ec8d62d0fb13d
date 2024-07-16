@@ -1,0 +1,9 @@
+package sec01.Exam01;
+
+public class WhileeExam {
+
+	int i = 1; 
+	while (true) {
+		
+	}
+}

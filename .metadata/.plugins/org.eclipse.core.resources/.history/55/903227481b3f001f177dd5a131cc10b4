@@ -1,0 +1,19 @@
+package Quiz;
+
+public class CarExam {
+
+	public static void main(String[] args) {
+
+		Avante av = new Avante();
+		Car car = new Car();
+		
+//		av.insert(40);
+//		av.colorful("AmazonGreen");
+//		av.money(1500);
+		
+		av.insert(100);
+		car.colorful(av.color);
+		car.money(av.price);
+	}
+
+}

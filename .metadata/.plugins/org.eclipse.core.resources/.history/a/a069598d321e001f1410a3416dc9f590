@@ -1,0 +1,12 @@
+package chap05;
+
+public class RefExam {
+
+	public static void main(String[] args) {
+
+		c = null;
+		System.out.println(c = "abc");
+		
+	}
+
+}

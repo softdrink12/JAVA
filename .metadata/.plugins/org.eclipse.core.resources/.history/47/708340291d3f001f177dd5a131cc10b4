@@ -1,0 +1,72 @@
+package Quiz;
+
+public class Car {
+
+	/*
+	 * 다음의 클래스를 상속받은 클래스 2개 이상 만들기 
+	 * 단, drive() 메소드는 필수 
+	 * 
+	 * 자동차 만들기 
+	 * 부모 클래스 Car
+	 * void drive() {
+	 * 		syso("운전을 시작합니다");
+	 *	 }
+	 */
+	
+	int oil;
+	String color;
+	int speed;
+	int price;
+	
+	void drive() {
+		System.out.println("운전을 한다!!!!!!!!!");
+	}
+	
+	int insert(int oil) {
+		if (this.oil < oil) {
+			System.out.println(oil - this.oil  + "리터 주유완료!!!!!");
+			System.out.println(oil - this.oil + "기름은 주유소에서 처리했으니 안심하라구~");
+		} else {
+			System.out.println(oil + "리터 주유완료!!!!!");
+		}
+		this.oil = oil;
+//		System.out.println(oil + "리터 주유완료!!!!!");
+		return this.oil;
+	}
+	
+//	int insert(int oil) {
+//		int a = this.oil;
+//		a += oil;
+//		if (a < oil) {
+//			System.out.println("기름 초과 !!!!!!!!");
+//		} else {
+//			System.out.println("주유 완료 !!!!!!!!");
+//		}
+//		return a;
+//	}
+	
+	void colorful (String color) {
+		this.color = color;
+		System.out.println(color + "색상 선택완료!!!!");
+	}
+	
+	int money(int price) {
+		this.price = price;
+		System.out.println("가격은 " + price + "$ 입니다 ");
+		return price;
+	}
+	
+	void rpm() {
+		this.oil = 100;
+		if (this.oil > 0 ) {
+			for (int i = 0; i <= 250; i+=10) {
+//				this.oil-= 10 * i;
+				this.oil = this.oil - 1*i;
+				System.out.println("시속 : " + i + "km/h");
+			}
+		} else if (this.oil == 0){
+			System.out.println("기름 앵꼬!!!!!!!!!!");
+		}
+	}
+	
+}

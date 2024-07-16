@@ -1,0 +1,22 @@
+package sec01.exam01;
+
+public class TryExam {
+
+	public static void main(String[] args) {
+
+		String s1 = null;
+//		System.out.println(s1.length());
+		System.out.println(s1);
+		
+		int[] a = new int[2];
+//		a[100] = 3;
+		
+		// 문자를 숫자로 바꾸는 방법 
+		String s2 = "20";
+		int age = 0;
+		age = Integer.parseInt(s2);
+		System.out.println(age + 1);
+		
+	}
+
+}

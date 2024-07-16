@@ -1,0 +1,10 @@
+package sec01.exam04.Food;
+
+public class FoodExam {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

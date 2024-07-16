@@ -1,0 +1,16 @@
+package Quiz;
+
+public class Engtrans extends Translate {
+
+	String eng1 = "love";
+	String eng2 = "friendship";
+	String eng3 = "null";
+	
+	String trans(String title) {
+		super.title = title;
+		return super.title;
+		
+	}
+	
+	
+}

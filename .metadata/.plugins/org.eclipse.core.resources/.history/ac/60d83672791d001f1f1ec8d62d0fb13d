@@ -1,0 +1,30 @@
+package sec01.Exam01;
+
+public class BreakExam {
+
+	public static void main(String[] args) {
+
+		
+		System.out.println("게임을 시작하지");
+		int count = 0;
+		while (true) {
+			count++;
+			int num = (int)(Math.random() * 6) + 1;
+			System.out.println(num);
+			
+			if (num == 6) {
+				break;
+			}
+		}
+		System.out.println("게임 종료 : 총 "+ count); 
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

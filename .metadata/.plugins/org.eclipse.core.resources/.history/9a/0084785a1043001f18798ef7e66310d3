@@ -1,0 +1,15 @@
+package chap09;
+
+public class OrderExam {
+
+	public static void main(String[] args) {
+
+		MemberDTO m1 = new MemberDTO();
+		MemberDTO m2 = new MemberDTO();
+		MemberDTO m3 = new MemberDTO();
+		
+		
+		
+	}
+
+}

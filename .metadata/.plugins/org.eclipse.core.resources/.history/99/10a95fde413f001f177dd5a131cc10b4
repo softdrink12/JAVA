@@ -1,0 +1,15 @@
+package Quiz;
+
+public class TranslateExam {
+
+	public static void main(String[] args) {
+
+		Translate tr1 = new Translate();
+		
+
+		
+
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package Quiz;
+
+public class Avante extends Car {
+
+	this.oil = 50;
+	this.color = "AmazonGreen";
+	this.price = 3100;
+	
+	
+}

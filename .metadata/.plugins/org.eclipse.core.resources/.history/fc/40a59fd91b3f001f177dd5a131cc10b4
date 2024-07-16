@@ -1,0 +1,17 @@
+package Quiz;
+
+public class Avante extends Car {
+
+	Avante() {
+		System.out.println("Avante 차량 옵션!!!!!!");
+		this.oil = 50;
+		this.color = "AmazonGreen";
+		this.price = 3100;
+		
+		@Override
+		public void drive() {
+			System.out.println("운전을 한다!!!!!!!!!");
+		}
+	}
+
+}

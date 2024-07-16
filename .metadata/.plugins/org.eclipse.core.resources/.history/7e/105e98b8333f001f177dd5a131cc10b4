@@ -1,0 +1,17 @@
+package Quiz;
+
+import java.util.ArrayList;
+
+public class EngTranslate {
+
+	ArrayList tr = new ArrayList();
+	
+	String kor1 = "사랑";
+	String kor2 = "우정";
+	String kor3 = "뷁";
+	
+	String eng1 = "love";
+	String eng2 = "friendship";
+	String eng3 = "null";
+	
+}

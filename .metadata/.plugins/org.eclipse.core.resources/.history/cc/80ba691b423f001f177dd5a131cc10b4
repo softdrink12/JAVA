@@ -1,0 +1,7 @@
+package Quiz;
+
+public class Jpntrans extends Translate {
+
+	String[] tr1 = {"아이", "요조우", "흐갸갹"};
+	
+}

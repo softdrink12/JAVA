@@ -1,0 +1,14 @@
+package chap09;
+
+public class MemberDTO {
+
+	String name;
+	int age;
+	
+	public String getName() {
+		return name;
+	}
+	
+	
+	
+}

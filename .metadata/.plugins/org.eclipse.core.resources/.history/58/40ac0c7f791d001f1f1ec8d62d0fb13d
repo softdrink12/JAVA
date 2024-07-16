@@ -1,0 +1,31 @@
+package sec01.Exam01;
+
+public class BreakExam {
+
+	public static void main(String[] args) {
+
+		
+		System.out.println("게임을 시작하지");
+		int count = 0;
+		while (true) {
+			count++;	// 무조건 세는 것 
+			int num = (int)(Math.random() * 6) + 1;
+			System.out.println(num);
+			
+			if (num == 6) {
+				break;
+			}
+			count++;	// break를 안만났을 때만 세는 것
+		}
+		System.out.println("게임 종료 : 총 "+ count); 
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

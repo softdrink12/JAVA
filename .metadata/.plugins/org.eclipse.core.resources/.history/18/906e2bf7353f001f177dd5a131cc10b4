@@ -1,0 +1,18 @@
+package Quiz;
+
+import java.util.ArrayList;
+
+public class Translate {
+
+	String[] tr = new String[3];
+	
+	String title;
+	
+	String trans(String title) {
+		this.title = title;
+		return this.title;
+	}
+	
+	
+	
+}

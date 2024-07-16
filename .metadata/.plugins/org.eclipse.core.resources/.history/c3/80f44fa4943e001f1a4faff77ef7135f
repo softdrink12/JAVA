@@ -1,0 +1,12 @@
+package Quiz;
+
+public class CarExam {
+
+	public static void main(String[] args) {
+
+		Avante av = new Avante();
+		
+		av.insert(40);
+	}
+
+}

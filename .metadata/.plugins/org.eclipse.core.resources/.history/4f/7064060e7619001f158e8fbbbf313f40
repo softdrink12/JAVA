@@ -1,0 +1,19 @@
+package sec01.exam01;
+
+public class TypeCastingExam {
+
+	public static void main(String[] args) {
+
+		int a = 10;
+		long b = (long)a;	// int인 a를 long 타입으로 바꿔라 
+							// long이 long 타입에 들어가는 건 문제가 되지 않는다
+		
+		long c = a;	// 작은 거에서 큰 걸로 바뀔 때는 손실이 없으므로 형변환을 생략할 수 있다
+					// 자동 형변환
+					// 암묵적 (묵시적, 암시적) 형변환
+		
+		System.out.println("c : " + c);
+		
+	}
+
+}

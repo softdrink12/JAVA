@@ -1,0 +1,11 @@
+package Quiz;
+
+public class Avante extends Car{
+
+	public static void main(String[] args) {
+
+		
+		
+	}
+
+}

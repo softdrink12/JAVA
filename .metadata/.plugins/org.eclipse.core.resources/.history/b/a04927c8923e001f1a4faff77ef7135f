@@ -1,0 +1,36 @@
+package Quiz;
+
+public class Car {
+
+	/*
+	 * 다음의 클래스를 상속받은 클래스 2개 이상 만들기 
+	 * 단, drive() 메소드는 필수 
+	 * 
+	 * 자동차 만들기 
+	 * 부모 클래스 Car
+	 * void drive() {
+	 * 		syso("운전을 시작합니다");
+	 *	 }
+	 */
+	
+	int oil;
+	String color;
+	int speed;
+	int price;
+	
+	void drive() {
+		System.out.println("운전을 한다!!!!!!!!!");
+	}
+	
+	int insert(int oil) {
+		this.oil = oil;
+		System.out.println(oil + "리터 주유완료!!!!!");
+		return this.oil;
+	}
+	
+	void colorful (String color) {
+		this.color = color;
+		System.out.println(color + "차 선택완료!!!!");
+	}
+	
+}

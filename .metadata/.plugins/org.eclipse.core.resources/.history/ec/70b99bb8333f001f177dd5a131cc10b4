@@ -1,0 +1,15 @@
+package Quiz;
+
+import java.util.ArrayList;
+
+public class EngTranslate {
+
+	ArrayList engtr = new ArrayList();
+	
+	
+	String eng1 = "love";
+	String eng2 = "friendship";
+	String eng3 = "null";
+	
+
+}
