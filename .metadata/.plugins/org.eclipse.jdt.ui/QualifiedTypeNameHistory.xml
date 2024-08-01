@@ -9,4 +9,5 @@
     <fullyQualifiedTypeName name="coffee.quiz.Twosome"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

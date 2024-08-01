@@ -1,7 +1,0 @@
-package sec01.exam04.Food;
-
-public class 제육 extends Food {
-
-	
-	
-}

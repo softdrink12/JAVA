@@ -1,0 +1,82 @@
+package sec01.exam13;
+
+public class StringExam {
+
+	public static void main(String[] args) {
+
+		String s1 = "영일이삼사오육칠팔구";
+		
+		char c = s1.charAt(3);
+		System.out.println("c: " + c);
+		int i = s1.length();
+		System.out.println("길이 :" + i);
+		
+		// indexOf
+		int i2 = s1.indexOf("이");
+		System.out.println("i2 : " + i2);
+		// 정확하게 일치하는 것이 없으면 -1 돌려줌
+		// 왼쪽에서부터 첫번째 일치하는 것의 인덱스를 돌려줌
+		System.out.println("아 :" + s1.indexOf("아"));
+		
+		i2 = s1.indexOf("사오");
+		System.out.println("i2 : " + i2);
+		
+		String blog = "blog.naver.com";
+		String cafe = "cafe.naver.com";
+		
+		if(blog.indexOf("blog") != -1) {
+			System.out.println("블로그 주소");
+		} else {
+			System.out.println("블로그 주소가 아님");
+		}
+		
+		if(cafe.indexOf("blog") != -1) {
+			System.out.println("카페 주소");
+		} else {
+			System.out.println("카페 주소가 아님");
+		}
+		
+		// 이메일 점검
+		// @와 . 이 없으면 이메일 주소 형식이 아님을 판단
+//		System.out.println("이메일 주소를 입력받았습니다");
+//		System.out.println("정확한 이메일 주소를 적어주세요");
+		
+		String email = "yaho@naver.com";
+		String email2 = "yahonavercom";
+		
+		if(email.indexOf("@") != -1 && email.indexOf(".") != -1) {
+			System.out.println("이메일 주소를 입력받았습니다");
+		} else {
+			System.out.println("정확한 이메일 주소를 적어주세요");
+		}
+		
+		if(email2.indexOf("@") != -1 && email2.indexOf(".") != -1) {
+			System.out.println("이메일 주소를 입력받았습니다");
+		} else {
+			System.out.println("정확한 이메일 주소를 적어주세요");
+		}
+		
+		// indexOf 구현
+		char c3 = 'o';
+		boolean flag = false;
+		for(int i3 = 0; i3 < email.length(); i3++) {
+			char c2 = email.charAt(i3);
+			if(c2 == c3) {
+				flag = true;
+				System.out.println(i3);
+				break;
+			}
+		}
+		if(!flag) {
+			System.out.println(-1);
+		}
+		
+		// replace를 사용해서 s1에 있는 "삼사"를 숫자 "34"로 바꿈
+		String s2 = s1.replace("삼사", "34");
+		System.out.println("s1 : " +s1);
+		System.out.println("s2 : " +s2);
+		
+		
+	}
+
+}

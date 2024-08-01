@@ -1,9 +1,0 @@
-package coffee.quiz;
-
-public class Coffee {
-
-	boolean isDT() {
-		return false;
-	}
-	
-}
