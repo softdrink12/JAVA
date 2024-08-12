@@ -128,5 +128,35 @@
 		${ dinner }<br>
 	</c:forEach>
 	
+	<hr>
+	<a href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=검색" target="_blank">네이버검색</a>
+	<br>
+	<a href="http://127.0.0.1:8080/proj3_todo/jstl.jsp">jstl page</a>
+	<br>
+	<a href="/proj3_todo/jstl.jsp">jstl page</a>
+	<br>
+	
+	<h1>
+		c:url 사용하는 이유
+	</h1>
+	1. 영어나 숫자 외 한글이나 특수문자를 encode 해줌<br>
+	2. context path 자동추가 (/proj3_todo)<br>
+	3. 쿠키 금지일 때 ;JSESSIONID= 를 자동으로 붙여줌<br>
+	
+	<c:url var="url1" value="/jstl.jsp">
+		<c:param name="a" value="한글"/>
+	</c:url>
+	<a href="${ url1 }">c:url</a>
+	<hr>
+	param.name : ${ param.name }<br>
+	c:out : <c:out value="${ param.name }"/><br>
+	c:out : 특수문자를 치환해서 문자 그 자체로 출력되게 해줌
+	<!--  
+	< : &lt;
+	> : &gt;
+	& : &amp;
+	" "공백 : &nbsp;
+	-->
+	
 </body>
 </html>

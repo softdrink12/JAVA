@@ -9,10 +9,13 @@
 <style>
 	table {
 		border-collapse: collapse;
+		width: 500px;
+		height: 400px;
 	}
 	
 	td {
 		padding: 0 20px;
+		text-align: center;
 	}
 	
 </style>
@@ -36,17 +39,34 @@
 <%-- 	</c:forEach> --%>
 	
 	<table border="1">
-	<c:forEach var="list2" items="${ list1 }" begin="0" end="20" varStatus="loop">
+	<tr>
+		<td>
+			<input type="checkbox">
+		</td>
+		<td>
+			제목 
+		</td>
+		<td>
+			시간
+		</td>
+	</tr>
+	<c:forEach var="i" begin="0" end="9" varStatus="loop">
 		<tr>
 			<td>
 				<c:if test="${ not loop.last }"><input type="checkbox"></c:if>
 				<c:if test="${ loop.last }"><input type="checkbox" checked="checked"></c:if>
 			</td>
-			<td>${ list2.title }</td>
-			<td>${ list2.dueDate }</td>
+			<td>
+				<c:url var="url1" value="/todo/read">
+					<c:param name="tno" value="${ list1[i].tno }"/>
+				</c:url>
+				<a href="${ url1 }">${ list1[i].title }</a>
+			</td>
+			<td>${ list1[i].dueDate }</td>
 		</tr>
 	</c:forEach>
 	</table>
+	
 	
 
 </body>

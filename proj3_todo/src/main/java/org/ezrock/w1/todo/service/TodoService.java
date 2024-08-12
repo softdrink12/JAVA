@@ -27,4 +27,15 @@ public class TodoService {
 		return list;
 	}
 	
+	public TodoDTO get (int tno) {
+		
+		TodoDTO dto = new TodoDTO();
+		dto.setTno(tno);
+		dto.setTitle("Todo");
+		dto.setDueDate(LocalDate.now());
+		dto.setFinished(true);
+		
+		return dto;
+	}
+	
 }

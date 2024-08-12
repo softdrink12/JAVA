@@ -10,4 +10,7 @@
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="org.ezrock.w1.todo.service.TodoService"/>
+    <fullyQualifiedTypeName name="org.zerock.w1.todo.dto.TodoDTO"/>
+    <fullyQualifiedTypeName name="gugu.dto.GuguDTO"/>
 </qualifiedTypeNameHistroy>
