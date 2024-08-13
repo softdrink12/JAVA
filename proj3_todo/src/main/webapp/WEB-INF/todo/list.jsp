@@ -18,6 +18,16 @@
 		text-align: center;
 	}
 	
+	a:link{
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a:visited{
+         color: inherit;
+         text-decoration: none;
+    }
+	
 </style>
 </head>
 <body>
@@ -50,7 +60,7 @@
 			시간
 		</td>
 	</tr>
-	<c:forEach var="i" begin="0" end="9" varStatus="loop">
+	<c:forEach var="dinner" items="${ list1 }" varStatus="loop">
 		<tr>
 			<td>
 				<c:if test="${ not loop.last }"><input type="checkbox"></c:if>
@@ -58,11 +68,11 @@
 			</td>
 			<td>
 				<c:url var="url1" value="/todo/read">
-					<c:param name="tno" value="${ list1[i].tno }"/>
+					<c:param name="tno" value="${ dinner.tno }"/>
 				</c:url>
-				<a href="${ url1 }">${ list1[i].title }</a>
+				<a href="${ url1 }">${ dinner.title }</a>
 			</td>
-			<td>${ list1[i].dueDate }</td>
+			<td>${ dinner.dueDate }</td>
 		</tr>
 	</c:forEach>
 	</table>
