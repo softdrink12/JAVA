@@ -42,8 +42,10 @@
 <%-- 		<c:param name="tno" value="${dto.tno }" /> --%>
 	</c:url>
 	<a href="${ url1 }"><input type="button" value="목록으로 돌아가기"></a>
-
-
+	
+	<a href="/proj3_todo/todo/update?tno=${ dto.tno }"><input type="button" value="수정"></a>
+	
+	<a href="/proj3_todo/todo/delete?tno=${ dto.tno }"><input type="button" value="삭제"></a>
 
 </body>
 </html>

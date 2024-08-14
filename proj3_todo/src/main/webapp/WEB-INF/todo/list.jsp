@@ -18,15 +18,17 @@
 		text-align: center;
 	}
 	
-	a:link{
-        color: inherit;
-        text-decoration: none;
-    }
+ 	a:link{ 
+         color: inherit; 
+         text-decoration: none; 
+     } 
 
-    a:visited{
-         color: inherit;
-         text-decoration: none;
-    }
+     a:visited{ 
+          color: inherit; 
+          text-decoration: none; 
+     } 
+
+
 	
 </style>
 </head>
@@ -48,6 +50,17 @@
 <%-- 		<input type="checkbox">${ list2.title }  ${ list2.dueDate }<br> --%>
 <%-- 	</c:forEach> --%>
 	
+<!-- 	<form action="register"> -->
+<!-- 		<input type="submit" value="등록"> -->
+<!-- 	</form> -->
+<!-- 	<br> -->
+
+	<div>
+		<a href="register"><input type="button" value="글쓰기"></a>
+		
+	</div>
+	<br>
+	
 	<table border="1">
 	<tr>
 		<td>
@@ -63,8 +76,13 @@
 	<c:forEach var="dinner" items="${ list1 }" varStatus="loop">
 		<tr>
 			<td>
-				<c:if test="${ not loop.last }"><input type="checkbox"></c:if>
-				<c:if test="${ loop.last }"><input type="checkbox" checked="checked"></c:if>
+				<!-- finished가 true라면 checked -->
+                  <c:if test="${dinner.finished == false}">
+                     <input type="checkbox">
+                  </c:if>
+                  <c:if test="${dinner.finished == true}">
+                     <input type="checkbox" checked="checked">
+                  </c:if>
 			</td>
 			<td>
 				<c:url var="url1" value="/todo/read">

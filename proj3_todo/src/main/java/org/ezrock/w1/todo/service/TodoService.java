@@ -9,8 +9,25 @@ import org.zerock.w1.todo.dto.TodoDTO;
 
 public class TodoService {
 
-	public void register(TodoDTO todoDTO) {
-		System.out.println("등록중..." + todoDTO.toString());
+	public int register(TodoDTO todoDTO) {
+		// DB에 insert
+		
+		TodoDAO todoDAO = new TodoDAO();
+		return todoDAO.insert(todoDTO);
+	}
+	
+	public int update(TodoDTO todoDTO) {
+		// DB에 insert
+		
+		TodoDAO todoDAO = new TodoDAO();
+		return todoDAO.update(todoDTO);
+	}
+	
+	public int delete(TodoDTO todoDTO) {
+		// DB에 insert
+		
+		TodoDAO todoDAO = new TodoDAO();
+		return todoDAO.delete(todoDTO);
 	}
 
 	public List<TodoDTO> getList() {
@@ -49,19 +66,6 @@ public class TodoService {
 		return dto;
 	}
 
-//	public TodoDTO get(int tno) {
-//
-//		TodoDAO todoDAO = new TodoDAO();
-//
-//		List<TodoDTO> list = todoDAO.selectAll();
-//		TodoDTO dto = list.get(tno-1);
-//
-//		dto.setTno( dto.getTno() );
-//		dto.setTitle( dto.getTitle() );
-//		dto.setDueDate( dto.getDueDate() );
-//		dto.setFinished( dto.isFinished() );
-//
-//		return dto;
-//	}
+	
 
 }
