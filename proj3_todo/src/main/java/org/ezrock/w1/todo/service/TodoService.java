@@ -57,11 +57,6 @@ public class TodoService {
 		
 		TodoDAO dao = new TodoDAO();
 		dto = dao.selectOne(tno);
-		
-//		dto.setTno(tno);
-//		dto.setTitle("Todo");
-//		dto.setDueDate(LocalDate.now());
-//		dto.setFinished(true);
 
 		return dto;
 	}

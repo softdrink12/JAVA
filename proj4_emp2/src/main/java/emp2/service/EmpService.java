@@ -6,11 +6,12 @@ import emp2.dao.EmpDAO;
 import emp2.dto.EmpDTO;
 
 public class EmpService {
+	
+	EmpDAO empDAO = new EmpDAO();
 
 	public List getEmp(String empnoo, String enamee) {
-		EmpDAO empdao = new EmpDAO();
 		
-		List result = empdao.selectEmp(empnoo, enamee);
+		List result = this.empDAO.selectEmp(empnoo, enamee);
 		
 		return result;
 	}
@@ -18,8 +19,27 @@ public class EmpService {
 	public int insert(EmpDTO empdto) {
 		// DB에 insert
 		
-		EmpDAO empDAO = new EmpDAO();
-		return empDAO.insert(empdto);
+		return this.empDAO.insert(empdto);
+	}
+	
+	public EmpDTO get(int empno) {
+		EmpDTO empdto = new EmpDTO();
+		
+		empdto = empDAO.One(empno);
+		
+		return empdto;
+	}
+	
+	public int update(EmpDTO empdto) {
+		
+		return empDAO.update(empdto);
+		
+	}
+	
+	public int delete(EmpDTO empdto) {
+		
+		return empDAO.delete(empdto);
+		
 	}
 	
 }

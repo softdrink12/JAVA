@@ -16,13 +16,24 @@
 		border-collapse: collapse;
 		width: 700px;
 	}
+	
+	#btn {
+		border: 1px solid black;
+		width: 60px;
+		height: 30px;
+		background-color: white;
+	}
+	
 </style>
 </head>
 <body>
 
+	<h1>사원목록</h1>
+
+	<a href="/proj4_emp2/emp/insert"><input type="button" id="btn" value="추가"></a><br><br>
+
 	<table border="1">
 			<tr>
-				<th><input type="checkbox"></th>
 				<th>empno</th>
 				<th>ename</th>
 				<th>job</th>
@@ -34,8 +45,7 @@
 			</tr>
 		<c:forEach var="list" items="${ list }">
 			<tr>
-				<td><input type="checkbox"></td>
-				<td>${ list.empno }</td>
+				<td><a href="emp/read?empno=${ list.empno }">${ list.empno }</a></td>
 				<td>${ list.ename }</td>
 				<td>${ list.job }</td>
 				<td>${ list.mgr }</td>

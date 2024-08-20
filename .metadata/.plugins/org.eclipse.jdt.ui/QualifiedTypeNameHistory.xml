@@ -15,5 +15,7 @@
     <fullyQualifiedTypeName name="org.zerock.w1.todo.dto.TodoDTO"/>
     <fullyQualifiedTypeName name="javax.naming.Context"/>
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="emp2.dto.EmpDTO"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
 </qualifiedTypeNameHistroy>
