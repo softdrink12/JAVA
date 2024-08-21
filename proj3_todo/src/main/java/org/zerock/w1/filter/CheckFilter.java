@@ -49,10 +49,11 @@ public class CheckFilter implements Filter {
 	    	
 	    	if(req.getServletPath().indexOf("/assets") == -1) {
 	    		response.setContentType("text/html; charset=utf-8;");
+	    		System.out.println("assets 폴더 안에 없음");
 	    	}
 	    	
 	    	chain.doFilter(request, response);
-	    } else {
+	    	} else {
 	    	HttpSession session = req.getSession();
 	    	Boolean isLogon = (Boolean)session.getAttribute("isLogon");
 	    	

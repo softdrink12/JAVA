@@ -17,6 +17,10 @@
 		width: 700px;
 	}
 	
+	td {
+		padding: 5px;
+	}
+	
 	#btn {
 		border: 1px solid black;
 		width: 60px;
