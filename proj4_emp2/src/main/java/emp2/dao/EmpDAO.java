@@ -52,19 +52,6 @@ public class EmpDAO {
 
 			String query = null;
 			PreparedStatement ps = null;
-
-//			if (empnoo != null) {
-//				query = "SELECT * from emp2 where empno = ?";
-//				ps = con.prepareStatement(query);
-//				ps.setInt(1, Integer.parseInt(empnoo));
-//			} else if (enamee != null) {
-//				query = "SELECT * from emp2 where ename = ?";
-//				ps = con.prepareStatement(query);
-//				ps.setString(1, enamee);
-//			} else {
-//				query = "SELECT * from emp2";
-//				ps = con.prepareStatement(query);
-//			}
 			
 			if ( empnoo != null && enamee != null ) {
 				query = "select * from emp2 where empno = ? or ename = ?";

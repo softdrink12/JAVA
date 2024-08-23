@@ -17,8 +17,20 @@ public class EmpDTO {
 	private Integer comm;
 	
 	private int deptno;
+	
+	private int rnum;
 
 	
+	public int getRnum() {
+		return rnum;
+	}
+
+
+	public void setRnum(int rnum) {
+		this.rnum = rnum;
+	}
+
+
 	public Integer getEmpno() {
 		return empno;
 	}
