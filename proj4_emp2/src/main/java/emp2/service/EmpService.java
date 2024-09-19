@@ -42,4 +42,12 @@ public class EmpService {
 		
 	}
 	
+	// 전달받은 EmpDTO를 EmpDAO로 보내고 
+	// DAO가 return한 EmpDTO를 반환한다
+	public EmpDTO loginCheck(EmpDTO empdto) {
+		EmpDAO empdao = new EmpDAO();
+		EmpDTO resultdto = empdao.selectLogin(empdto);
+		return resultdto;
+	}
+	
 }

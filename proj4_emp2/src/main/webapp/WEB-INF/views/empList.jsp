@@ -32,6 +32,17 @@
 </head>
 <body>
 
+	<div style="text-align: right;">
+		
+		<c:if test="${ not empty loginDTO }">
+			${ loginDTO.ename }님 환영합니다
+		</c:if>
+		<c:if test="${ empty loginDTO }">
+			<a href="login.jsp">로그인</a>
+		</c:if>
+		
+	</div>
+
 	<h1>사원목록</h1>
 
 	<a href="/proj4_emp2/emp/insert"><input type="button" id="btn" value="추가"></a><br><br>

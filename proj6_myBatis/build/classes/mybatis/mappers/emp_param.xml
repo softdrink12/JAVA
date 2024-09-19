@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.emp.param">
+
+	<insert id="insertEmp" parameterType="emp.crud.EmpDTO">
+		INSERT INTO emp0 (empno, ename, hiredate)
+		VALUES (#{empno}, #{ename}, #{hireDate})
+	</insert>
+	
+	<select id="selectOneEmp" resultType="emp.crud.EmpDTO" parameterType="emp.crud.EmpDTO">
+		select
+			empno, ename, hireDate 
+		from emp0
+		where empno = #{empno}
+	</select>
+	
+	<update id="updateEmp" parameterType="emp.crud.EmpDTO">
+		/* 주석 updateEmp */
+		UPDATE 
+			emp0
+		SET 
+			ename = #{ename},
+			hireDate = #{hireDate}
+		WHERE
+			empno = #{empno}
+	</update>
+	
+	<delete id="deleteEmp" parameterType="emp.crud.EmpDTO">
+		delete
+			emp0
+		where
+			empno = #{empno}
+	</delete>
+
+</mapper>

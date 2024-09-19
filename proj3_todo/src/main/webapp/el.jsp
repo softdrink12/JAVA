@@ -16,7 +16,7 @@
 	
 	<%--jsp파일에서 나누기는 div로 함 --%>
 	\${ 10 / 3 } : ${ 10 / 3 }<br>
-	\${ 10 div 3 } : ${ 10 div 3 }<br>
+<%-- 	\${ 10 div 3 } : ${ 10 div 3 }<br> --%>
 	
 	<%--jsp파일에서 나머지는 mod로 함 --%>
 	\${ 10 % 3 } : ${ 10 % 3 }<br>
@@ -27,7 +27,7 @@
 	\${ "10" eq "10" } : ${ "10" eq "10" }<br>
 	
 	\${ 10 != 10 } : ${ 10 != 10 }<br>
-	\${ 10 ne 10 } : ${ 10 ne 10 }<br>
+<%-- 	\${ 10 ne 10 } : ${ 10 ne 10 }<br> --%>
 	
 	\${ 100 > 10 } : ${ 100 > 10 }<br>
 	\${ 100 gt 10 } : ${ 100 gt 10 }<br>
@@ -35,8 +35,8 @@
 	\${ 100 < 10 } : ${ 100 < 10 }<br>
 	\${ 100 lt 10 } : ${ 100 lt 10 }<br>
 	
-	\${ 100 >= 10 } : ${ 100 >= 10 }<br>
-	\${ 100 ge 10 } : ${ 100 ge 10 }<br>
+<%-- 	\${ 100 >= 10 } : ${ 100 >= 10 }<br> --%>
+<%-- 	\${ 100 ge 10 } : ${ 100 ge 10 }<br> --%>
 	
 	\${ 100 <= 10 } : ${ 100 <= 10 }<br>
 	\${ 100 le 10 } : ${ 100 le 10 }<br>
@@ -58,8 +58,8 @@
 	\${ empty null } : ${ empty null }<br>
 	\${ empty "" } : ${ empty "" }<br>
 	<hr>
-	\${ param.a } : ${ param.a }<br>
-	\${ paramValues.a } : ${ paramValues.a }<br>
+<%-- 	\${ param.a } : ${ param.a }<br> --%>
+<%-- 	\${ paramValues.a } : ${ paramValues.a }<br> --%>
 	\${ paramValues.a[0] } : ${ paramValues.a[0] }<br>
 	\${ paramValues.a[1] } : ${ paramValues.a[1] }<br>
 	\${ paramValues.a[100] } : ${ paramValues.a[100] }<br>

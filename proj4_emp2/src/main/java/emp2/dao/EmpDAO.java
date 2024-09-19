@@ -278,5 +278,46 @@ public class EmpDAO {
 		
 		return result;
 	}
+	
+	public EmpDTO selectLogin(EmpDTO empdto) {
+		EmpDTO resultdto = null;
+		
+		try {
+			
+			Context ctx = new InitialContext();
+			DataSource dateSource = (DataSource) ctx.lookup("java:/comp/env/jdbc/oracle");
+			Connection con = dateSource.getConnection();
+			
+			String query = " select * from emp3 ";
+					query += " where ename = ? and empno = ? ";
+					
+			PreparedStatement ps = new LoggableStatement(con, query);
+			ps.setString(1, empdto.getEname());
+			ps.setInt(2, empdto.getEmpno());
+			
+			// 실제 실행되는 sql을 출력해볼 수 있다 
+			System.out.println( ( (LoggableStatement)ps ).getQueryString() );
+			
+			ResultSet rs = ps.executeQuery();
+			while ( rs.next() ) {
+				resultdto = new EmpDTO();
+				
+				resultdto.setEmpno( rs.getInt("empno") );
+				resultdto.setEname( rs.getString("ename") );
+				resultdto.setSal( rs.getInt("sal") );
+			}
+			
+			rs.close();
+			ps.close();
+			con.close();
+					
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return resultdto;
+	}
 
 }
