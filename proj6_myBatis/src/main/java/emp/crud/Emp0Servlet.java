@@ -22,9 +22,22 @@ public class Emp0Servlet extends HttpServlet {
 		String cmd = request.getParameter("cmd");
 		
 		if(cmd == null) {
+//			List<EmpDTO> emplist = empDAO.selectEmp();
+			
 			EmpDAO empDAO = new EmpDAO();
-			List<EmpDTO> emplist = empDAO.selectEmp();
+			EmpDTO empDTO = new EmpDTO();
+			empDTO.setKeyword(request.getParameter("keyword"));
+			empDTO.setSearchType(request.getParameter("searchType"));
+			String[] checks = request.getParameterValues("check");
+			empDTO.setChecks(checks);
+			String orderType = request.getParameter("orderType");
+			empDTO.setOrderType(orderType);
+			
+			List<EmpDTO> emplist = empDAO.selectEmpList(empDTO);
 			request.setAttribute("emplist", emplist);
+			request.setAttribute("keyword", request.getParameter("keyword"));
+			request.setAttribute("searchType", request.getParameter("searchType"));
+			request.setAttribute("orderType", orderType);
 			
 			request.getRequestDispatcher("/WEB-INF/views/emp.jsp").forward(request, response);
 		} else if ("join".equals(cmd)) {
@@ -114,7 +127,6 @@ public class Emp0Servlet extends HttpServlet {
 				
 				EmpDTO empDTO = new EmpDTO();
 				empDTO.setEmpno(empno);
-				System.out.println(empDTO);
 				
 				// insert 실행
 				EmpDAO empDAO = new EmpDAO();

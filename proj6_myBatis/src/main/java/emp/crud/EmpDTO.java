@@ -19,8 +19,36 @@ public class EmpDTO {
 	private int deptno;
 	
 	private int rnum;
-
 	
+	private String keyword;
+	
+	private String searchType;
+	
+	private String[] checks;
+	
+	private String orderType;
+	
+	
+	public String getSearchType() {
+		return searchType;
+	}
+
+
+	public void setSearchType(String searchType) {
+		this.searchType = searchType;
+	}
+
+
+	public String getKeyword() {
+		return keyword;
+	}
+
+
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+	}
+
+
 	public int getRnum() {
 		return rnum;
 	}
@@ -96,10 +124,33 @@ public class EmpDTO {
 		this.deptno = deptno;
 	}
 
+
 	@Override
 	public String toString() {
-		return "EmpDTO [empno=" + empno + ", ename=" + ename + ", job=" + job + ", mgr=" + mgr + ", hiredate="
-				+ hireDate + ", sal=" + sal + ", comm=" + comm + ", deptno=" + deptno + "]";
+		return "EmpDTO [empno=" + empno + ", ename=" + ename + ", job=" + job + ", mgr=" + mgr + ", hireDate="
+				+ hireDate + ", sal=" + sal + ", comm=" + comm + ", deptno=" + deptno + ", rnum=" + rnum + ", keyword="
+				+ keyword + "]";
 	}
+
+
+	public String[] getChecks() {
+		return checks;
+	}
+
+
+	public void setChecks(String[] checks) {
+		this.checks = checks;
+	}
+
+
+	public String getOrderType() {
+		return orderType;
+	}
+
+
+	public void setOrderType(String orderType) {
+		this.orderType = orderType;
+	}
+
 	
 }
