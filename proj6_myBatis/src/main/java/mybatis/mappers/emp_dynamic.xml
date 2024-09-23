@@ -107,6 +107,15 @@
 			<when test="orderType == 'asc' ">
 				 order by empno asc
 			</when>
+			
+			<!-- 
+				#{} : 문자인 경우 홀따옴표('')을 붙여서 나타내고 숫자인 경우는 그냥 나타냄
+						ex) abx > 'abc', 123 > 123
+						
+				${} : 홀따옴표 없이 그대로 내보냄  
+						ex) abc > abc, 123 > 123
+			 -->
+			
 		</choose>
 		
 	</select>

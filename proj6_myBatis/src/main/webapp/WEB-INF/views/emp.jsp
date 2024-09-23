@@ -56,15 +56,16 @@ td {
 					<thead>
 						<tr>
 							<th>선택</th>
+							<th id="empno">empno
 							<c:if test="${ orderType eq 'desc' }">
-								<th id="empno">empno↑</th>
+								↑
 							</c:if>
 							<c:if test="${ orderType eq 'asc' }">
-								<th id="empno">empno↓</th>
+								↓
 							</c:if>
-							<c:if test="${ orderType eq '' }">
-								<th id="empno">empno</th>
-							</c:if>
+<%-- 							<c:if test="${ orderType eq '' or orderType eq null}"> --%>
+<%-- 							</c:if> --%>
+							</th>
 							<th>ename</th>
 							<th>job</th>
 							<th>mgr</th>
