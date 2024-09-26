@@ -4,6 +4,37 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.emp">
 
-
+	<select id="selectEmp" resultType="empDTO">
+		select * from emp0
+	</select>
+	
+	<insert id="insertEmp" parameterType="empDTO">
+		INSERT INTO emp0 (empno, ename, job)
+		VALUES (#{empno}, #{ename}, #{job})
+	</insert>
+	
+	<select id="selectOneEmp" resultType="empDTO" parameterType="empDTO">
+		select
+			empno, ename, job 
+		from emp0
+		where empno = #{empno}
+	</select>
+	
+	<delete id="deleteEmp" parameterType="empDTO">
+		delete
+			emp0
+		where
+			empno = #{empno}
+	</delete>
+	
+	<update id="updateEmp" parameterType="empDTO">
+		UPDATE 
+			emp0
+		SET 
+			ename = #{ename},
+			job = #{job}
+		WHERE
+			empno = #{empno}
+	</update>
 
 </mapper>
