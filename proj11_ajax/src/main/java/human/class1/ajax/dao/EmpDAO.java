@@ -8,4 +8,6 @@ public interface EmpDAO {
 
 	List<EmpDTO> selectEmp();
 	
+	int deleteEmp(EmpDTO empDTO);
+	
 }
