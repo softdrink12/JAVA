@@ -11,5 +11,11 @@ public interface EmpService {
 	List<EmpDTO> listEmp();
 	
 	int deleteEmp(EmpDTO empDTO);
+	
+	EmpDTO selectOne(EmpDTO empDTO);
+	
+	int insert(EmpDTO empDTO);
+	
+	int updateEmp(EmpDTO empDTO);
 
 }

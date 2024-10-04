@@ -30,4 +30,28 @@ public class EmpServiceImpl implements EmpService {
 		return result;
 	}
 
+	@Override
+	public EmpDTO selectOne(EmpDTO empDTO) {
+		
+		EmpDTO dto = empDAO.selectOne(empDTO);
+		
+		return dto;
+	}
+
+	@Override
+	public int insert(EmpDTO empDTO) {
+		
+		int result = empDAO.insertEmp(empDTO);
+		
+		return result;
+	}
+
+	@Override
+	public int updateEmp(EmpDTO empDTO) {
+		
+		int result = empDAO.updateEmp(empDTO);
+		
+		return result;
+	}
+
 }

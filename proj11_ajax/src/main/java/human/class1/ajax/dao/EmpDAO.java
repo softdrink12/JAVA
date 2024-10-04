@@ -10,4 +10,10 @@ public interface EmpDAO {
 	
 	int deleteEmp(EmpDTO empDTO);
 	
+	int insertEmp(EmpDTO empDTO);
+	
+	EmpDTO selectOne(EmpDTO empDTO);
+	
+	int updateEmp(EmpDTO empDTO);
+	
 }

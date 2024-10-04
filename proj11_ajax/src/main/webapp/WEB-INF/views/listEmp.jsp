@@ -20,6 +20,8 @@ td {
 </head>
 <body>
 
+	<a href="insert"><button>회원가입</button></a>
+
 	<table border="1">
 		<thead>
 			<tr>
@@ -92,7 +94,7 @@ td {
 							<input type="checkbox" name="check" value="${ list.empno }">
 						</td>
 						<td>\${ empList[i].empno }</td>
-						<td><a href="emp0?cmd=edit&empno=${ empList[i].empno }">\${ empList[i].ename }</a></td>
+						<td><a href="read?empno=\${ empList[i].empno }">\${ empList[i].ename }</a></td>
 						<td>\${ empList[i].job }</td>
 						<td>\${ empList[i].mgr }</td>
 						<td>\${YYYY}-\${MM}-\${dd}</td>
